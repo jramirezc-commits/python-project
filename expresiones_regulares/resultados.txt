@@ -1,0 +1,3 @@
+['ia', 'ia', 'IA', 'IA'].['ia', 'ia', 'IA', 'IA'].['ia', 'ia', 'IA', 'IA'].
+['ia', 'ia', 'IA', 'IA'].
+Resultado: ['ia', 'ia', 'IA', 'IA'].

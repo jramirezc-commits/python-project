@@ -45,3 +45,13 @@ persona = SimpleNamespace(
     edad=25
 )
 persona.nombre  # "Jairo"
+
+# /////////////////////
+# PRINT()
+# ///////////////////////
+
+print('Resultado', result, sep=': ', file=open('expresiones_regulares//resultados.txt', 'a'), end='.\n')
+# sep= — Separador entre valores
+# file= — Imprimir a un archivo en vez de consola
+# end= — Qué poner al final
+# flush= — Forzar la impresión inmediata (False por defecto)
