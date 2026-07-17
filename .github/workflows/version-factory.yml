@@ -1,0 +1,24 @@
+name: Factory Version
+run-name: Factory Version
+
+on:
+  push:
+    branches:
+      # - release
+      - feature/**
+
+jobs:
+  generate-version:
+    runs-on: ubuntu-latest
+    outputs:
+      new-version: ${{ steps.generate-new-id.outputs.VERSION }}
+    steps:
+      - name: Generating New Version
+        id: 'generate-new-id'
+        run: echo "VERSION=v1.0-${{ github.run_id }} >> $GITHUB_OUTPUT"
+
+  show-new-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show Version
+        run: echo "Empaquetando la versión:${{ jobs.generate-version.outputs.new-version }}"
