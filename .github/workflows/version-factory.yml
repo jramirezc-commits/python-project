@@ -4,8 +4,8 @@ run-name: Factory Version
 on:
   push:
     branches:
-      # - release
-      - feature/**
+      - release
+      - main
 
 jobs:
   generate-version:
@@ -15,10 +15,16 @@ jobs:
     steps:
       - name: Generating New Version
         id: 'generate-new-id'
-        run: echo "VERSION=v1.0-${{ github.run_id }} >> $GITHUB_OUTPUT"
+        run: echo "VERSION=v1.0-${{ github.run_id }}" >> $GITHUB_OUTPUT
 
   show-new-version:
+    needs: generate-version
     runs-on: ubuntu-latest
     steps:
       - name: Show Version
-        run: echo "Empaquetando la versión:${{ jobs.generate-version.outputs.new-version }}"
+        run: echo "Empaquetando la versión:${{ needs.generate-version.outputs.new-version }}"
+
+  run-security-template:
+    uses: ./.github/workflows/security-template.yml
+    with:
+      programing_lenguage: 'Node.js'
