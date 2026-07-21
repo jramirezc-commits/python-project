@@ -4,12 +4,19 @@ run-name: Deploy to AWS
 on:
   push:
     branches:
-      - feature/**
+      - main
 
 jobs:
-  validating-aws:
+  deploy-staging:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Despligue Pruebas
+        run: echo "Instalando la aplicación en el servidor de pruebas (Staging)..."
+
+  deploy-production:
+    needs: deploy-staging
     runs-on: ubuntu-latest
     environment: production
     steps:
-      - name: Pipeline para aws
-        run: echo "Pipeline para desplegar a production en aws"
+      - name: Despliegue produccion
+        run: echo "¡Aprobación recibida! Desplegando en los servidores de producción de AWS."
