@@ -1,0 +1,13 @@
+name: Empty
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  validating-aws:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pipeline para aws
+        run: echo "Pipeline para aws"
