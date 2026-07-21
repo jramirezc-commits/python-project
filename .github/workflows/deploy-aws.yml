@@ -1,4 +1,4 @@
-name: Deploy to AWS
+name: Pipeline for Deploy to AWS Cloud
 run-name: Deploy to AWS
 
 on:
