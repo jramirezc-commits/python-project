@@ -8,6 +8,7 @@ on:
 jobs:
   validating-aws:
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - name: Pipeline para aws
-        run: echo "Pipeline para aws"
+        run: echo "Pipeline para desplegar a production en aws"
