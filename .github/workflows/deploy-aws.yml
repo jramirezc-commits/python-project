@@ -1,9 +1,10 @@
-name: Empty
+name: Deploy to AWS
+run-name: Deploy to AWS
 
 on:
   push:
     branches:
-      - main
+      - feature/**
 
 jobs:
   validating-aws:
