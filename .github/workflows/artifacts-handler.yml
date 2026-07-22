@@ -3,7 +3,7 @@ run-name: Saving Artifact
 
 on:
   push:
-    branches: [main]
+    branches: [feature/**]
 
 jobs:
   constructor:
