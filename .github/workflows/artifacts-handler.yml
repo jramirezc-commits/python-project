@@ -26,4 +26,6 @@ jobs:
         with:
           name: my-aplication
       - name: Reading File
-        run: echo "cat resultados.txt"
+        run: |
+          echo "cat resultados.txt"
+          echo "ls -l"
