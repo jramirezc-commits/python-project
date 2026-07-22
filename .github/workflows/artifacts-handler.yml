@@ -13,7 +13,7 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: my-aplication
-          path: ../resultados.txt
+          path: resultados.txt
   
   deployment:
     needs: constructor
