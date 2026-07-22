@@ -6,6 +6,12 @@ on:
     branches: [feature/**]
 
 jobs:
+  load-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v7
+
   constructor:
     runs-on: ubuntu-latest
     steps:
