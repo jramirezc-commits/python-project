@@ -1,0 +1,27 @@
+name: Artifact
+run-name: Saving Artifact
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  constructor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Upload File
+        uses: actions/upload-artifact@v7
+        with:
+          name: my-aplication
+          path: ../resultados.txt
+  
+  deployment:
+    needs: constructor
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download File
+        uses: actions/download-artifact@v8
+        with:
+          name: my-aplication
+      - name: Reading File
+        run: echo "cat resultados.txt"
