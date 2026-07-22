@@ -6,16 +6,11 @@ on:
     branches: [feature/**]
 
 jobs:
-  load-code:
+  constructor:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v7
-
-  constructor:
-    needs: load-code
-    runs-on: ubuntu-latest
-    steps:
       - name: Upload File
         uses: actions/upload-artifact@v7
         with:
