@@ -3,7 +3,7 @@ run-name: Saving Artifact
 
 on:
   push:
-    branches: [feature/**]
+    branches: [feature/**, main]
 
 jobs:
   validate-language:
