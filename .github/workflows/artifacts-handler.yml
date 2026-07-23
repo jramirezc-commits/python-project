@@ -6,7 +6,13 @@ on:
     branches: [feature/**]
 
 jobs:
+  validate-language:
+    uses: JairoRamirezC/ejercicios-pipeline/blob/feature/new-pipeline/.github/workflows/context.yml
+    with:
+      language: 'python'
+
   constructor:
+    needs: validate-language
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
