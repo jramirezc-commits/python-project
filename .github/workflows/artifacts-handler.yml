@@ -7,7 +7,7 @@ on:
 
 jobs:
   validate-language:
-    uses: JairoRamirezC/ejercicios-pipeline/.github/workflows/context.yml@feature/graficos
+    uses: JairoRamirezC/ejercicios-pipeline/.github/workflows/matriz.yml@feature/new-pipeline
     with:
       language: 'python'
 
