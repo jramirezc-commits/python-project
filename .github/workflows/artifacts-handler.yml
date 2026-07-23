@@ -7,7 +7,7 @@ on:
 
 jobs:
   validate-language:
-    uses: JairoRamirezC/ejercicios-pipeline/blob/feature/new-pipeline/.github/workflows/context.yml
+    uses: JairoRamirezC/ejercicios-pipeline/.github/workflows/context.yml
     with:
       language: 'python'
 
